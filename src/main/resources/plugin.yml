@@ -1,0 +1,27 @@
+name: PYRSEC
+version: ${project.version}
+main: pyr.solutions.allkingplugin.AllKingPlugin
+api-version: 1.16
+authors: [MattKing]
+commands:
+  god:
+    description: Makes u invincible!
+    usage: /<command>
+    aliases: [godme]
+    permission: allkingplugin.god
+  pyr:
+  reloadconfig:
+    usage: /<command>
+    description: Reloads the configuration file.
+    permission: allkingplugin.reloadconfig
+  setsyspass:
+    usage: /<command>
+    description: Set new password for the system.
+    permission: allkingplugin.setsyspass
+  announce:
+    usage: /<command> [text]
+    permission: allkingplugin.announce
+    aliases: ann
+  ap:
+    permission: allkingplugin.ap
+  dumb:
