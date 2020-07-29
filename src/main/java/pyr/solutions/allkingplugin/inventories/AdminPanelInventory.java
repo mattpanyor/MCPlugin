@@ -12,8 +12,10 @@ public class AdminPanelInventory {
     private final ItemStack saturation_apple = new ItemStack(Material.APPLE,1);
     private final ItemStack night_vision_nether_star = new ItemStack(Material.NETHER_STAR,1);
     private final ItemStack fire_resistance_campfire = new ItemStack(Material.CAMPFIRE,1);
+    private final ItemStack resistance_armor = new ItemStack(Material.NETHERITE_CHESTPLATE,1);
 
     private final Inventory adminPanel;
+
 
     public AdminPanelInventory(Player player){
         adminPanel = Bukkit.createInventory(player, 9, "Admin Panel");
@@ -30,7 +32,15 @@ public class AdminPanelInventory {
         item3_meta.setDisplayName("Fire Resistance");
         fire_resistance_campfire.setItemMeta(item3_meta);
 
-        adminPanel.addItem(saturation_apple,night_vision_nether_star,fire_resistance_campfire);
+        ItemMeta item4_meta = resistance_armor.getItemMeta();
+        item4_meta.setDisplayName("Resistance");
+        resistance_armor.setItemMeta(item4_meta);
+
+        adminPanel.addItem(
+                saturation_apple,
+                night_vision_nether_star,
+                fire_resistance_campfire,
+                resistance_armor);
     }
 
     public Inventory getInventory(){
@@ -47,6 +57,10 @@ public class AdminPanelInventory {
 
     public ItemStack getFire_resistance_campfire() {
         return fire_resistance_campfire;
+    }
+
+    public ItemStack getResistance_armor() {
+        return resistance_armor;
     }
 
 }

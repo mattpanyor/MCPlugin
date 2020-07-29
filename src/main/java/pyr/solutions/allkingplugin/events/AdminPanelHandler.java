@@ -33,6 +33,10 @@ public class AdminPanelHandler implements Listener {
                 PotionEffect fire_resistance = new PotionEffect(PotionEffectType.FIRE_RESISTANCE, 100000,255, false, false, false);
                 p.addPotionEffect(fire_resistance);
             }
+            if(e.getCurrentItem().equals(ap.getResistance_armor())){
+                PotionEffect resistance = new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 100000,255, false, false, false);
+                p.addPotionEffect(resistance);
+            }
         }
     }
 }
