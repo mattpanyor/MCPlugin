@@ -16,8 +16,7 @@ public class SetSystemPass implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args){
         if(command.getName().equals("setsyspass")
-                && sender instanceof Player
-                && ((Player)sender).isOp()){
+                && sender.isOp()){
 
             String newpass = Base64.getEncoder().encodeToString(args[0].getBytes());
             plugin.getConfig().set("Password", newpass);

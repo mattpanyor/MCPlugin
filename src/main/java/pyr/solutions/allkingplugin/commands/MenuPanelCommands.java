@@ -12,7 +12,7 @@ public class MenuPanelCommands implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if(command.getName().equals("ap") && sender instanceof Player && ((Player)sender).isOp()){
+        if(command.getName().equals("ap") && sender instanceof Player && sender.isOp()){
             Player player = (Player) sender;
 
             AdminPanelInventory ap = new AdminPanelInventory(player);
