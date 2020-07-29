@@ -24,6 +24,8 @@ public final class AllKingPlugin extends JavaPlugin {
         getCommand("setsyspass").setExecutor(new SetSystemPass());
         getCommand("announce").setExecutor(new Announcement());
         getCommand("ap").setExecutor((new MenuPanelCommands()));
+        getCommand("fly").setExecutor(new Fly());
+        getCommand("clearinv").setExecutor(new ClearInventory());
 
         getConfig().options().copyDefaults();
         saveDefaultConfig();

@@ -24,4 +24,7 @@ commands:
     aliases: ann
   ap:
     permission: allkingplugin.ap
-  dumb:
+  fly:
+    permission: allkingplugin.fly
+  clearinv:
+    permission: allkingplugin.fly
