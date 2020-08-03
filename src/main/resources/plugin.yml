@@ -27,4 +27,4 @@ commands:
   fly:
     permission: allkingplugin.fly
   clearinv:
-    permission: allkingplugin.fly
+    permission: allkingplugin.clearinv

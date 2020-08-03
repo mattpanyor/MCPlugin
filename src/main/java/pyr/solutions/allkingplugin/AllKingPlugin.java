@@ -27,6 +27,9 @@ public final class AllKingPlugin extends JavaPlugin {
         getCommand("fly").setExecutor(new Fly());
         getCommand("clearinv").setExecutor(new ClearInventory());
 
+        // -- PUBLIC COMMANDS --
+
+
         getConfig().options().copyDefaults();
         saveDefaultConfig();
 

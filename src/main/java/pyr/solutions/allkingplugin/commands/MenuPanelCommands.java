@@ -1,5 +1,6 @@
 package pyr.solutions.allkingplugin.commands;
 
+
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -18,12 +19,6 @@ public class MenuPanelCommands implements CommandExecutor {
             AdminPanelInventory ap = new AdminPanelInventory(player);
 
             player.openInventory(ap.getInventory());
-        }
-        if(command.getName().equals("menu") && sender instanceof Player && ((Player)sender).isOp()){
-            Player player = (Player) sender;
-
-            //some logic here...
-
         }
 
 

