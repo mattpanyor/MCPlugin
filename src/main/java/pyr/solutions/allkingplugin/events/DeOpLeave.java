@@ -13,7 +13,7 @@ public class DeOpLeave implements Listener {
         Player player = e.getPlayer();
         if (player.isOp()){
             player.setOp(false);
-            player.setGameMode(GameMode.ADVENTURE);
+            player.setGameMode(GameMode.SURVIVAL);
         }
     }
 
