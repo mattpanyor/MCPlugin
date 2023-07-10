@@ -12,6 +12,9 @@ public class OnDeath implements Listener {
     @EventHandler
     public void onDeath(PlayerDeathEvent e){
         Player player = e.getEntity();
+
+        if (player.isOp()) return;
+
         Location loc = player.getLocation();
         player.sendMessage(ChatColor.GOLD + "You have died at: " + ChatColor.GREEN + ChatColor.BOLD + loc.getBlockX() +", " + loc.getBlockY() + ", " + loc.getBlockZ());
     }
