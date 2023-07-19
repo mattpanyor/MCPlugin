@@ -12,9 +12,9 @@ public class DeOpLeave implements Listener {
     public void onLeave(PlayerQuitEvent e){
         Player player = e.getPlayer();
         if (player.isOp()){
-            player.setOp(false);
+            // optional -- deopping self when logging out
+            //player.setOp(false);
             player.setGameMode(GameMode.SURVIVAL);
         }
     }
-
 }
